@@ -1,0 +1,143 @@
+<html>
+  <head>
+    <title>TheMessFinder</title>
+    <link rel="stylesheet" href="./src/css/style.css" />
+  </head>
+
+  <body>
+    <div class="landing">
+      <div class="landing-interact">
+        <div class="navbar">
+          <div class="branding">
+            <div><img class="logo" src="./src/images/logo.png" /></div>
+            <div class="logo-title">The Mess Finder</div>
+
+            <marquee> <h2> sucsess we add rating to the best mess </h2></marquee>
+          </div>
+          <!--
+                <div class="links">
+                   
+                    <div>
+                        <button class="nav-button sign">Send Message</button>
+                        <button onclick="location.href = 'send.html';" id="myButton" class="float-left submit-button" >Home</button>
+                    </div>
+                </div>
+                -->
+        </div>
+        <div class="title">
+          <div id="typewriter" class="changing"></div>
+          <div class="sub-title">Find best mess near you.</div>
+        </div>
+        <div class="search">
+          <select
+            id="selection"
+            onchange="updateSelection(); document.getElementById('search').href=`./static/list.html?q=${this.value}`;"
+            class="search-bar"
+            type="text"
+            placeholder="Enter your place location"
+          >
+            <option value="" selected style="display: none"
+              >Select your location</option
+            >
+            <option value="11">Tatisilwai</option>
+            < a href="https://maps.app.goo.gl/DTnxoqo8z72VKxJr6>"Map</a> 
+            <option value="3">Baet Bangla</option>
+            <option value="7">Gondli Pokhar</option>
+            <option value="1">Milan Chowk</option>
+            <option value="6">Namkum station</option>
+          </select>
+          <a id="search" href="#"
+            ><button
+              disabled
+              id="search-button"
+              class="search-bar search-submit"
+              type="submit"
+            >
+              Search
+            </button></a
+          >
+          <script>
+            function updateSelection() {
+              console.log("lol");
+              if (document.getElementById("selection").value == "") {
+                document.getElementById("search-button").disabled = true;
+              } else {
+                document.getElementById("search-button").disabled = false;
+              }
+            }
+          </script>
+        </div>
+        <div class=" cities ">
+          <div class="cities-title">CITIES SERVED IN RANCHI</div>
+          <div class="cities-sub-title">
+            Tatisilwai, Beat Bangla, Gondli Pokhar, Milan Chowk, Namkum Station
+          </div>
+        </div>
+      </div>
+      <div class="landing-images ">
+        <img class="landing-image " src="https://content.jdmagicbox.com/comp/def_content/tiffin-home-delivery-services/5-tiffin-home-delivery-services-10-jrgrn.jpg"/>
+      </div>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <div><img class="feature-image" src="src/images/order.png" /></div>
+        <div class="feature-title">Variety & Choices</div>
+        <div class="feature-desc">
+          Loading for veg Thai, non veg ? We got best mess
+          covering many araes.
+        </div>
+      </div>
+      <div class="feature">
+        <div><img class="feature-image" src="src/images/ice-cream.png" /></div>
+        <div class="feature-title">Close To You</div>
+        <div class="feature-desc">
+          Loading for veg Thali, non veg ? We got best mess
+          covering many araes.
+        </div>
+      </div>
+    </div>
+    <div class="mobile">
+      <div class="mob-1">
+        <img class="mobile-image" src="https://www.shutterstock.com/image-vector/food-finder-app-logo-design-260nw-1328492687.jpg" />
+      </div>
+      <div class="mob-2">
+        <div class="changing">Mess in your pocket</div>
+        <div class="sub-title">
+          Discover new Mess near you on the go.
+        </div>
+        <div class="stores">
+          <img
+            class="store-image"
+            onClick="alertFunction()"
+            src="src/images/play.webp"
+          /><img class="store-image" src="src/images/iOS.webp" onClick="alertFunction()"/>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="credits">Made by Tejash, Ankesh, Shatakshi,  
+        <H2> CONTACT NO - 9304002391 / EMAIL - messfinder01@gmail.com</H2>
+      </div>
+    </div>
+
+    <script>
+      const alertFunction = () => {
+        window.alert("App is in development... or is it?");
+      };
+    </script>
+    <script src="./src/js/core.js"></script>
+    <script type="text/javascript">
+      const instance = new Typewriter("#typewriter", {
+        strings: [
+          "find mess?",
+          "you are non-vegetarian?",
+          "avoid junk food",
+          "eat good food",
+          "be patience?"
+        ],
+        autoStart: true,
+        loop: true
+      });
+    </script>
+  </body>
+</html>
